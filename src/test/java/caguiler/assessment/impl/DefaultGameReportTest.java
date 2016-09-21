@@ -10,7 +10,6 @@ import static org.mockito.Mockito.mock;
 import org.junit.Before;
 import org.junit.Test;
 
-import caguiler.assessment.Game;
 import caguiler.assessment.GameReport;
 import caguiler.assessment.GameRoundResult;
 import caguiler.assessment.GameStatistics;
@@ -108,8 +107,4 @@ public class DefaultGameReportTest {
 
 		assertEquals(TOTAL_ROUNDS, statistics.getNumberOfGameRounds());
 	}
-
-	interface TestGame extends Game {
-	}
-
 }

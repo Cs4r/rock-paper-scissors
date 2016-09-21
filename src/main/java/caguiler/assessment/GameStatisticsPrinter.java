@@ -1,17 +1,16 @@
 package caguiler.assessment;
 
 /**
- * Produces a printable results for {@link GameStatistics}
+ * Produces printable results for {@link GameStatistics}
  * 
  * @author Cesar Aguilera <cesar.aguilera.p@gmail.com>
  *
- * @param <G>
+ * @param <T>
  *            the {@link Game}
  */
 
-public class GameStatisticsPrinter<G extends Game> {
+public interface GameStatisticsPrinter<T extends Game> {
 
-	public String print() {
-		return null;
-	}
+	public String print();
+
 }

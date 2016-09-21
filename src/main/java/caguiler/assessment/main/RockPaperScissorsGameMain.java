@@ -5,6 +5,8 @@ import caguiler.assessment.GameRoundResult;
 import caguiler.assessment.GameStatistics;
 import caguiler.assessment.GameStatisticsPrinter;
 import caguiler.assessment.Player;
+import caguiler.assessment.impl.DefaultGameReport;
+import caguiler.assessment.impl.GameStatisticsPrinters;
 import caguiler.assessment.impl.RandomPlayer;
 import caguiler.assessment.impl.RockPaperScissorsGame;
 import caguiler.assessment.impl.RockPaperScissorsRound;
@@ -16,7 +18,7 @@ public class RockPaperScissorsGameMain {
 	public static void main(String[] args) {
 		final Player<RockPaperScissorsGame> player1 = RandomPlayer.of(1);
 		final Player<RockPaperScissorsGame> player2 = RockyPlayer.of(2);
-		final GameReport<RockPaperScissorsGame> report = null;
+		final GameReport<RockPaperScissorsGame> report = new DefaultGameReport<>();
 
 		for (int roundId = 1; roundId <= NUMBER_OF_ROUNDS; ++roundId) {
 			RockPaperScissorsRound round = RockPaperScissorsRound.fromId(roundId);
@@ -28,7 +30,7 @@ public class RockPaperScissorsGameMain {
 
 		GameStatistics<RockPaperScissorsGame> statistics = report.getStatistics();
 
-		GameStatisticsPrinter<RockPaperScissorsGame> printer = null;
+		GameStatisticsPrinter<RockPaperScissorsGame> printer = GameStatisticsPrinters.toText(statistics);
 
 		String results = printer.print();
 
