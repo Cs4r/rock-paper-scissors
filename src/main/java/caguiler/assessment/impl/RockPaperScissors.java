@@ -1,8 +1,12 @@
-package caguiler.assessment;
+package caguiler.assessment.impl;
 
 import static caguiler.assessment.GameRoundResult.LOSS;
 import static caguiler.assessment.GameRoundResult.TIE;
 import static caguiler.assessment.GameRoundResult.WIN;
+
+import caguiler.assessment.Game;
+import caguiler.assessment.GameRole;
+import caguiler.assessment.GameRoundResult;
 
 /**
  * The rock, paper, scissors game (Our game)

@@ -1,14 +1,16 @@
-package caguiler.assessment;
+package caguiler.assessment.impl;
 
 import static caguiler.assessment.GameRoundResult.LOSS;
 import static caguiler.assessment.GameRoundResult.TIE;
 import static caguiler.assessment.GameRoundResult.WIN;
-import static caguiler.assessment.RockPaperScissors.PAPER;
-import static caguiler.assessment.RockPaperScissors.SCISSORS;
-import static caguiler.assessment.RockPaperScissors.ROCK;
+import static caguiler.assessment.impl.RockPaperScissors.PAPER;
+import static caguiler.assessment.impl.RockPaperScissors.ROCK;
+import static caguiler.assessment.impl.RockPaperScissors.SCISSORS;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import caguiler.assessment.impl.RockPaperScissors;
 
 /**
  * Unit tests for {@link RockPaperScissors}
