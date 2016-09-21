@@ -1,7 +1,7 @@
 package caguiler.assessment;
 
 /**
- * A player of a game
+ * A player of a {@link Game}
  * 
  * @author Cesar Aguilera <cesar.aguilera.p@gmail.com>
  *
@@ -11,12 +11,12 @@ package caguiler.assessment;
 public interface Player<T extends Game> {
 
 	/**
-	 * @return Player's identifier
+	 * @return A positive number representing the player's identifier.
 	 */
 	int getId();
 
 	/**
 	 * @return {@link GameRole} taken during a game round
 	 */
-	GameRole<Game> role();
+	GameRole<T> getRole();
 }
