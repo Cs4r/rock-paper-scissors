@@ -17,18 +17,23 @@ import org.junit.Test;
 public class RockPaperScissorsTest {
 
 	@Test
-	public void ScissorsBeatsPaper() {
+	public void scissorsBeatsPaper() {
 		assertTrue(SCISSORS.canBeat(PAPER));
 	}
 
 	@Test
-	public void PaperBeatsRock() {
+	public void paperBeatsRock() {
 		assertTrue(PAPER.canBeat(ROCK));
 	}
 
 	@Test
-	public void RockBeatsScissors() {
+	public void rockBeatsScissors() {
 		assertTrue(ROCK.canBeat(SCISSORS));
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void rock_canBeatThrowsIllegalArgumentExceptionWhenNullIsPassed() {
+		ROCK.canBeat(null);
 	}
 
 }
