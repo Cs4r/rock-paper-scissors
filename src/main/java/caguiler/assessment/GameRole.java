@@ -15,8 +15,7 @@ public interface GameRole<T extends Game> {
 	 * 
 	 * @param other
 	 *            the {@link GameRole} to check
-	 * @return true if this {@link GameRole} can beat the given {@link GameRole}
-	 *         ,false otherwise
+	 * @return {@link GameRoundResult} depending on the game rules
 	 */
-	boolean canBeat(GameRole<T> other);
+	GameRoundResult canBeat(GameRole<T> other);
 }

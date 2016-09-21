@@ -1,5 +1,8 @@
 package caguiler.assessment;
 
+import static caguiler.assessment.GameRoundResult.LOSS;
+import static caguiler.assessment.GameRoundResult.WIN;
+
 /**
  * The rock, paper, scissors game (Our game)
  * 
@@ -13,25 +16,28 @@ public class RockPaperScissors implements Game {
 
 	public static final GameRole<RockPaperScissors> ROCK = new GameRole<RockPaperScissors>() {
 		@Override
-		public boolean canBeat(GameRole<RockPaperScissors> other) {
+		public GameRoundResult canBeat(GameRole<RockPaperScissors> other) {
 			throwIllegalArgumentExceptionIfNullIsPassed(other);
-			return other == SCISSORS;
+			if(other == SCISSORS) return WIN;
+			return LOSS;
 		}
 	};
 
 	public static final GameRole<RockPaperScissors> PAPER = new GameRole<RockPaperScissors>() {
 		@Override
-		public boolean canBeat(GameRole<RockPaperScissors> other) {
+		public GameRoundResult canBeat(GameRole<RockPaperScissors> other) {
 			throwIllegalArgumentExceptionIfNullIsPassed(other);
-			return other == ROCK;
+			if(other == ROCK) return WIN;
+			return LOSS;
 		}
 	};
 
 	public static final GameRole<RockPaperScissors> SCISSORS = new GameRole<RockPaperScissors>() {
 		@Override
-		public boolean canBeat(GameRole<RockPaperScissors> other) {
+		public GameRoundResult canBeat(GameRole<RockPaperScissors> other) {
 			throwIllegalArgumentExceptionIfNullIsPassed(other);
-			return other == PAPER;
+			if(other == PAPER) return WIN;
+			return LOSS;
 		}
 	};
 

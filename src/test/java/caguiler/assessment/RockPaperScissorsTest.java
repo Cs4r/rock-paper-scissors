@@ -1,5 +1,8 @@
 package caguiler.assessment;
 
+import static caguiler.assessment.GameRoundResult.LOSS;
+import static caguiler.assessment.GameRoundResult.TIE;
+import static caguiler.assessment.GameRoundResult.WIN;
 import static caguiler.assessment.RockPaperScissors.PAPER;
 import static caguiler.assessment.RockPaperScissors.SCISSORS;
 import static caguiler.assessment.RockPaperScissors.ROCK;
@@ -18,47 +21,47 @@ public class RockPaperScissorsTest {
 
 	@Test
 	public void scissorsBeatsPaper() {
-		assertTrue(SCISSORS.canBeat(PAPER));
+		assertEquals(WIN, SCISSORS.canBeat(PAPER));
 	}
 
 	@Test
 	public void paperBeatsRock() {
-		assertTrue(PAPER.canBeat(ROCK));
+		assertEquals(WIN, PAPER.canBeat(ROCK));
 	}
 
 	@Test
 	public void rockBeatsScissors() {
-		assertTrue(ROCK.canBeat(SCISSORS));
+		assertEquals(WIN, ROCK.canBeat(SCISSORS));
 	}
 
 	@Test
 	public void scissorsCannotBeatRock() {
-		assertFalse(SCISSORS.canBeat(ROCK));
+		assertEquals(LOSS, SCISSORS.canBeat(ROCK));
 	}
 
 	@Test
 	public void paperCannotBeatScissors() {
-		assertFalse(PAPER.canBeat(SCISSORS));
+		assertEquals(LOSS, PAPER.canBeat(SCISSORS));
 	}
 
 	@Test
 	public void rockCannotBeatPaper() {
-		assertFalse(ROCK.canBeat(PAPER));
+		assertEquals(LOSS, ROCK.canBeat(PAPER));
 	}
 
 	@Test
 	public void rockCannotBeatItself() {
-		assertFalse(ROCK.canBeat(ROCK));
+		assertEquals(TIE, ROCK.canBeat(ROCK));
 	}
 
 	@Test
 	public void paperCannotBeatItself() {
-		assertFalse(PAPER.canBeat(PAPER));
+		assertEquals(TIE, PAPER.canBeat(PAPER));
 	}
 
 	@Test
 	public void scissorsCannotBeatItself() {
-		assertFalse(SCISSORS.canBeat(SCISSORS));
+		assertEquals(TIE, SCISSORS.canBeat(SCISSORS));
 	}
 
 	@Test(expected = IllegalArgumentException.class)
