@@ -6,8 +6,6 @@ import static org.mockito.Mockito.mock;
 
 import org.junit.Test;
 
-import caguiler.assessment.GameRound;
-
 /**
  * Unit tests for {@link RockyPlayer}
  * 
