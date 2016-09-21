@@ -36,4 +36,14 @@ public class RockPaperScissorsTest {
 		ROCK.canBeat(null);
 	}
 
+	@Test(expected = IllegalArgumentException.class)
+	public void paper_canBeatThrowsIllegalArgumentExceptionWhenNullIsPassed() {
+		PAPER.canBeat(null);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void scissors_canBeatThrowsIllegalArgumentExceptionWhenNullIsPassed() {
+		SCISSORS.canBeat(null);
+	}
+
 }

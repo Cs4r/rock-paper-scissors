@@ -7,12 +7,14 @@ package caguiler.assessment;
  *
  */
 public class RockPaperScissors implements Game {
-	
-	private RockPaperScissors(){}
+
+	private RockPaperScissors() {
+	}
 
 	public static final GameRole<RockPaperScissors> ROCK = new GameRole<RockPaperScissors>() {
 		@Override
 		public boolean canBeat(GameRole<RockPaperScissors> other) {
+			throwIllegalArgumentExceptionIfNullIsPassed(other);
 			return other == SCISSORS;
 		}
 	};
@@ -20,6 +22,7 @@ public class RockPaperScissors implements Game {
 	public static final GameRole<RockPaperScissors> PAPER = new GameRole<RockPaperScissors>() {
 		@Override
 		public boolean canBeat(GameRole<RockPaperScissors> other) {
+			throwIllegalArgumentExceptionIfNullIsPassed(other);
 			return other == ROCK;
 		}
 	};
@@ -27,7 +30,14 @@ public class RockPaperScissors implements Game {
 	public static final GameRole<RockPaperScissors> SCISSORS = new GameRole<RockPaperScissors>() {
 		@Override
 		public boolean canBeat(GameRole<RockPaperScissors> other) {
+			throwIllegalArgumentExceptionIfNullIsPassed(other);
 			return other == PAPER;
 		}
 	};
+
+	private static void throwIllegalArgumentExceptionIfNullIsPassed(GameRole<RockPaperScissors> other) {
+		if (other == null) {
+			throw new IllegalArgumentException();
+		}
+	}
 }
