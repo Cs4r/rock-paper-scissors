@@ -26,4 +26,9 @@ public class RockPaperScissorsTest {
 		assertTrue(PAPER.canBeat(ROCK));
 	}
 
+	@Test
+	public void RockBeatsScissors() {
+		assertTrue(ROCK.canBeat(SCISSORS));
+	}
+
 }

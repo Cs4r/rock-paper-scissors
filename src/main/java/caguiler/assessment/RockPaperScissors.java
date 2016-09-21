@@ -7,11 +7,13 @@ package caguiler.assessment;
  *
  */
 public class RockPaperScissors implements Game {
+	
+	private RockPaperScissors(){}
 
 	public static final GameRole<RockPaperScissors> ROCK = new GameRole<RockPaperScissors>() {
 		@Override
 		public boolean canBeat(GameRole<RockPaperScissors> other) {
-			return false;
+			return other == SCISSORS;
 		}
 	};
 
