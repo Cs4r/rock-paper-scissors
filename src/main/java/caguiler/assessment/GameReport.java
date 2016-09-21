@@ -4,6 +4,8 @@ package caguiler.assessment;
  * Registers the result of several {@link GameRound} between two {@link Player}s
  * in order to provide {@link GameStatistics}
  * 
+ * @param <T>
+ *            any {@link Game}
  * @author Cesar Aguilera <cesar.aguilera.p@gmail.com>
  */
 public interface GameReport<T extends Game> {
@@ -18,7 +20,7 @@ public interface GameReport<T extends Game> {
 	 * @param player2
 	 *            second player
 	 */
-	void playRound(GameRound<T> round, Player<T> player1, Player<T> player2);
+	void registerResult(GameRoundResult round, Player<T> player1, Player<T> player2);
 
 	/**
 	 * @return {@link GameStatistics} for a sequence of played rounds

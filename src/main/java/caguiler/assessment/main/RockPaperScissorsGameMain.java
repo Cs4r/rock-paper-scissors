@@ -1,6 +1,7 @@
 package caguiler.assessment.main;
 
 import caguiler.assessment.GameReport;
+import caguiler.assessment.GameRoundResult;
 import caguiler.assessment.GameStatistics;
 import caguiler.assessment.GameStatisticsPrinter;
 import caguiler.assessment.Player;
@@ -19,7 +20,10 @@ public class RockPaperScissorsGameMain {
 
 		for (int roundId = 1; roundId <= NUMBER_OF_ROUNDS; ++roundId) {
 			RockPaperScissorsRound round = RockPaperScissorsRound.fromId(roundId);
-			report.playRound(round, player1, player2);
+
+			GameRoundResult roundResult = player1.getRole(round).canBeat(player2.getRole(round));
+
+			report.registerResult(roundResult, player1, player2);
 		}
 
 		GameStatistics<RockPaperScissorsGame> statistics = report.getStatistics();
