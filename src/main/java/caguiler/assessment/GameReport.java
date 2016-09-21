@@ -12,7 +12,7 @@ public interface GameReport<T extends Game> {
 
 	/**
 	 * Registers the result of a {@link GameRound} between two players. The
-	 * result is dependent main's player perspective.
+	 * result is dependent of main's player perspective.
 	 * 
 	 * @param result
 	 *            the {@link GameRound}

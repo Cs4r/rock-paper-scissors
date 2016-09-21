@@ -17,14 +17,17 @@ import caguiler.assessment.GameRoundResult;
 public class RockPaperScissorsGame implements Game {
 
 	private RockPaperScissorsGame() {
+		// Cannot be instantiated
 	}
 
 	public static final GameRole<RockPaperScissorsGame> ROCK = new GameRole<RockPaperScissorsGame>() {
 		@Override
 		public GameRoundResult canBeat(GameRole<RockPaperScissorsGame> other) {
 			throwIllegalArgumentExceptionIfNullIsPassed(other);
-			if(other == SCISSORS) return WIN;
-			if(this == other) return TIE;
+			if (other == SCISSORS)
+				return WIN;
+			if (this == other)
+				return TIE;
 			return LOSS;
 		}
 	};
@@ -33,8 +36,10 @@ public class RockPaperScissorsGame implements Game {
 		@Override
 		public GameRoundResult canBeat(GameRole<RockPaperScissorsGame> other) {
 			throwIllegalArgumentExceptionIfNullIsPassed(other);
-			if(other == ROCK) return WIN;
-			if(this == other) return TIE;
+			if (other == ROCK)
+				return WIN;
+			if (this == other)
+				return TIE;
 			return LOSS;
 		}
 	};
@@ -43,8 +48,10 @@ public class RockPaperScissorsGame implements Game {
 		@Override
 		public GameRoundResult canBeat(GameRole<RockPaperScissorsGame> other) {
 			throwIllegalArgumentExceptionIfNullIsPassed(other);
-			if(other == PAPER) return WIN;
-			if(this == other) return TIE;
+			if (other == PAPER)
+				return WIN;
+			if (this == other)
+				return TIE;
 			return LOSS;
 		}
 	};

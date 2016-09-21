@@ -13,7 +13,7 @@ import caguiler.assessment.GameStatisticsPrinter;
  *            any {@link Game}
  * 
  */
-public class ToSimpleTextGameStatisticsPrinter<T extends Game> implements GameStatisticsPrinter<T> {
+class ToSimpleTextGameStatisticsPrinter<T extends Game> implements GameStatisticsPrinter<T> {
 
 	private final String summary;
 

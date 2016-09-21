@@ -70,7 +70,7 @@ public class DefaultGameReportTest {
 		assertEquals(ZERO, statistics.getSecondPlayerWins());
 
 		assertEquals(ZERO, statistics.getFirstPlayerTies());
-		assertEquals(ZERO, statistics.getFirstPlayerTies());
+		assertEquals(ZERO, statistics.getSecondPlayerTies());
 
 		assertEquals(ZERO, statistics.getNumberOfGameRounds());
 	}

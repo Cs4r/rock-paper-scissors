@@ -6,7 +6,7 @@ package caguiler.assessment;
  * @author Cesar Aguilera <cesar.aguilera.p@gmail.com>
  *
  * @param <T>
- *            any game
+ *            any {@link Game}
  */
 public interface GameStatistics<T extends Game> {
 

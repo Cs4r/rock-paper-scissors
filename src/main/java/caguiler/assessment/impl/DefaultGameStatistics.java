@@ -5,6 +5,8 @@ import caguiler.assessment.GameStatistics;
 
 /**
  * Default implementation of {@link GameStatistics}
+ * 
+ * @author Cesar Aguilera <cesar.aguilera.p@gmail.com>
  *
  * @param <T>
  *            any {@link Game}
