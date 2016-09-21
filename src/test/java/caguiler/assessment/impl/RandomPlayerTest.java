@@ -45,11 +45,12 @@ public class RandomPlayerTest {
 	}
 
 	@Test
-	public void getRoleReturnsRandomRoleOnEachCall() {
-		RandomPlayer player = new RandomPlayer(1, 1);
-
+	public void getRoleReturnsARandomRoleOnEachCall() {
+		int seed = 1;
+		// Expected roles of RandomPlayer if seed is set to 1
 		List<GameRole<RockPaperScissorsGame>> expectedRole = Arrays.asList(ROCK, PAPER, PAPER, ROCK, SCISSORS, PAPER,
 				SCISSORS, PAPER, PAPER);
+		RandomPlayer player = new RandomPlayer(1, seed);
 		RockPaperScissorsRound round = mock(RockPaperScissorsRound.class);
 
 		for (int i = 0; i < 9; ++i) {
