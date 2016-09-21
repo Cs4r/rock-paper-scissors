@@ -24,6 +24,13 @@ public class RockyPlayerTest {
 	}
 	
 	@Test
+	public void ofCreatesAPlayerWithTheGivenId() {
+		int expected = 1;
+		RockyPlayer player = RockyPlayer.of(expected);
+		assertEquals(expected, player.getId());
+	}
+	
+	@Test
 	public void getRoleAlwaysReturnsRockAsGameRole(){
 		RockyPlayer player = RockyPlayer.of(1);
 		for(int i = 0; i < 10; ++i){
