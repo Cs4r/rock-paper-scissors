@@ -51,7 +51,6 @@ public class DefaultGameReportTest {
 	@Test
 	public void testGetStatisticsReturnsANotNullObject() {
 		gameReport.registerResult(roundResult, player1, player2);
-
 		assertNotNull(gameReport.getStatistics());
 	}
 
