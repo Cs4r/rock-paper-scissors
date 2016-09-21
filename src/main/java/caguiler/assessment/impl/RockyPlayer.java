@@ -3,6 +3,7 @@ package caguiler.assessment.impl;
 import static caguiler.assessment.impl.RockPaperScissorsGame.ROCK;
 
 import caguiler.assessment.GameRole;
+import caguiler.assessment.GameRound;
 import caguiler.assessment.Player;
 
 /**
@@ -26,7 +27,10 @@ public class RockyPlayer implements Player<RockPaperScissorsGame> {
 	}
 
 	@Override
-	public GameRole<RockPaperScissorsGame> getRole() {
+	public GameRole<RockPaperScissorsGame> getRole(GameRound<RockPaperScissorsGame> round) {
+		if (round == null) {
+			throw new IllegalArgumentException();
+		}
 		return ROCK;
 	}
 
