@@ -11,16 +11,17 @@ package caguiler.assessment;
 public interface GameReport<T extends Game> {
 
 	/**
-	 * Registers the result of a {@link GameRound} between two players
+	 * Registers the result of a {@link GameRound} between two players. The
+	 * result is dependent main's player perspective.
 	 * 
-	 * @param round
+	 * @param result
 	 *            the {@link GameRound}
 	 * @param player1
 	 *            first player
 	 * @param player2
 	 *            second player
 	 */
-	void registerResult(GameRoundResult round, Player<T> player1, Player<T> player2);
+	void registerResult(GameRoundResult result, Player<T> player1, Player<T> player2);
 
 	/**
 	 * @return {@link GameStatistics} for a sequence of played rounds
