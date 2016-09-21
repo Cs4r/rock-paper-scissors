@@ -3,23 +3,23 @@ package caguiler.assessment.impl;
 import static caguiler.assessment.GameRoundResult.LOSS;
 import static caguiler.assessment.GameRoundResult.TIE;
 import static caguiler.assessment.GameRoundResult.WIN;
-import static caguiler.assessment.impl.RockPaperScissors.PAPER;
-import static caguiler.assessment.impl.RockPaperScissors.ROCK;
-import static caguiler.assessment.impl.RockPaperScissors.SCISSORS;
+import static caguiler.assessment.impl.RockPaperScissorsGame.PAPER;
+import static caguiler.assessment.impl.RockPaperScissorsGame.ROCK;
+import static caguiler.assessment.impl.RockPaperScissorsGame.SCISSORS;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import caguiler.assessment.impl.RockPaperScissors;
+import caguiler.assessment.impl.RockPaperScissorsGame;
 
 /**
- * Unit tests for {@link RockPaperScissors}
+ * Unit tests for {@link RockPaperScissorsGame}
  * 
  * 
  * @author Cesar Aguilera <cesar.aguilera.p@gmail.com>
  *
  */
-public class RockPaperScissorsTest {
+public class RockPaperScissorsGameTest {
 
 	@Test
 	public void scissorsBeatsPaper() {

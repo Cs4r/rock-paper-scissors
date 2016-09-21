@@ -34,7 +34,7 @@ public class RockyPlayerTest {
 	public void getRoleAlwaysReturnsRockAsGameRole(){
 		RockyPlayer player = RockyPlayer.of(1);
 		for(int i = 0; i < 10; ++i){
-			assertEquals(RockPaperScissors.ROCK, player.getRole());
+			assertEquals(RockPaperScissorsGame.ROCK, player.getRole());
 		}
 	}
 }

@@ -1,18 +1,18 @@
 package caguiler.assessment.impl;
 
-import static caguiler.assessment.impl.RockPaperScissors.ROCK;
+import static caguiler.assessment.impl.RockPaperScissorsGame.ROCK;
 
 import caguiler.assessment.GameRole;
 import caguiler.assessment.Player;
 
 /**
- * A player of {@link RockPaperScissors} whose {@link GameRole} is always
- * {@link RockPaperScissors#ROCK}
+ * A player of {@link RockPaperScissorsGame} whose {@link GameRole} is always
+ * {@link RockPaperScissorsGame#ROCK}
  * 
  * @author Cesar Aguilera <cesar.aguilera.p@gmail.com>
  *
  */
-public class RockyPlayer implements Player<RockPaperScissors> {
+public class RockyPlayer implements Player<RockPaperScissorsGame> {
 
 	private final int id;
 
@@ -26,7 +26,7 @@ public class RockyPlayer implements Player<RockPaperScissors> {
 	}
 
 	@Override
-	public GameRole<RockPaperScissors> getRole() {
+	public GameRole<RockPaperScissorsGame> getRole() {
 		return ROCK;
 	}
 
@@ -36,6 +36,9 @@ public class RockyPlayer implements Player<RockPaperScissors> {
 	 * @param id
 	 *            the player's id
 	 * @return a new instance of {@link RockyPlayer} with the given id
+	 * 
+	 * @throws IllegalArgumentException
+	 *             if the given id is not positive
 	 */
 	public static RockyPlayer of(int id) {
 		if (id < 1) {

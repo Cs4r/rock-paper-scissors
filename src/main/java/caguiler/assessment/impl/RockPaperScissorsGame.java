@@ -14,14 +14,14 @@ import caguiler.assessment.GameRoundResult;
  * @author Cesar Aguilera <cesar.aguilera.p@gmail.com>
  *
  */
-public class RockPaperScissors implements Game {
+public class RockPaperScissorsGame implements Game {
 
-	private RockPaperScissors() {
+	private RockPaperScissorsGame() {
 	}
 
-	public static final GameRole<RockPaperScissors> ROCK = new GameRole<RockPaperScissors>() {
+	public static final GameRole<RockPaperScissorsGame> ROCK = new GameRole<RockPaperScissorsGame>() {
 		@Override
-		public GameRoundResult canBeat(GameRole<RockPaperScissors> other) {
+		public GameRoundResult canBeat(GameRole<RockPaperScissorsGame> other) {
 			throwIllegalArgumentExceptionIfNullIsPassed(other);
 			if(other == SCISSORS) return WIN;
 			if(this == other) return TIE;
@@ -29,9 +29,9 @@ public class RockPaperScissors implements Game {
 		}
 	};
 
-	public static final GameRole<RockPaperScissors> PAPER = new GameRole<RockPaperScissors>() {
+	public static final GameRole<RockPaperScissorsGame> PAPER = new GameRole<RockPaperScissorsGame>() {
 		@Override
-		public GameRoundResult canBeat(GameRole<RockPaperScissors> other) {
+		public GameRoundResult canBeat(GameRole<RockPaperScissorsGame> other) {
 			throwIllegalArgumentExceptionIfNullIsPassed(other);
 			if(other == ROCK) return WIN;
 			if(this == other) return TIE;
@@ -39,9 +39,9 @@ public class RockPaperScissors implements Game {
 		}
 	};
 
-	public static final GameRole<RockPaperScissors> SCISSORS = new GameRole<RockPaperScissors>() {
+	public static final GameRole<RockPaperScissorsGame> SCISSORS = new GameRole<RockPaperScissorsGame>() {
 		@Override
-		public GameRoundResult canBeat(GameRole<RockPaperScissors> other) {
+		public GameRoundResult canBeat(GameRole<RockPaperScissorsGame> other) {
 			throwIllegalArgumentExceptionIfNullIsPassed(other);
 			if(other == PAPER) return WIN;
 			if(this == other) return TIE;
@@ -49,7 +49,7 @@ public class RockPaperScissors implements Game {
 		}
 	};
 
-	private static void throwIllegalArgumentExceptionIfNullIsPassed(GameRole<RockPaperScissors> other) {
+	private static void throwIllegalArgumentExceptionIfNullIsPassed(GameRole<RockPaperScissorsGame> other) {
 		if (other == null) {
 			throw new IllegalArgumentException();
 		}
