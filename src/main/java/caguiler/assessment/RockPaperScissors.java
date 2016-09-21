@@ -1,6 +1,7 @@
 package caguiler.assessment;
 
 import static caguiler.assessment.GameRoundResult.LOSS;
+import static caguiler.assessment.GameRoundResult.TIE;
 import static caguiler.assessment.GameRoundResult.WIN;
 
 /**
@@ -19,6 +20,7 @@ public class RockPaperScissors implements Game {
 		public GameRoundResult canBeat(GameRole<RockPaperScissors> other) {
 			throwIllegalArgumentExceptionIfNullIsPassed(other);
 			if(other == SCISSORS) return WIN;
+			if(this == other) return TIE;
 			return LOSS;
 		}
 	};
@@ -28,6 +30,7 @@ public class RockPaperScissors implements Game {
 		public GameRoundResult canBeat(GameRole<RockPaperScissors> other) {
 			throwIllegalArgumentExceptionIfNullIsPassed(other);
 			if(other == ROCK) return WIN;
+			if(this == other) return TIE;
 			return LOSS;
 		}
 	};
@@ -37,6 +40,7 @@ public class RockPaperScissors implements Game {
 		public GameRoundResult canBeat(GameRole<RockPaperScissors> other) {
 			throwIllegalArgumentExceptionIfNullIsPassed(other);
 			if(other == PAPER) return WIN;
+			if(this == other) return TIE;
 			return LOSS;
 		}
 	};

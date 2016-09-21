@@ -50,17 +50,17 @@ public class RockPaperScissorsTest {
 	}
 
 	@Test
-	public void rockCannotBeatItself() {
+	public void rockEndsUpInATieAgainstItself() {
 		assertEquals(TIE, ROCK.canBeat(ROCK));
 	}
 
 	@Test
-	public void paperCannotBeatItself() {
+	public void paperEndsUpInATieAgainstItself() {
 		assertEquals(TIE, PAPER.canBeat(PAPER));
 	}
 
 	@Test
-	public void scissorsCannotBeatItself() {
+	public void scissorsEndsUpInATieAgainstItself() {
 		assertEquals(TIE, SCISSORS.canBeat(SCISSORS));
 	}
 
