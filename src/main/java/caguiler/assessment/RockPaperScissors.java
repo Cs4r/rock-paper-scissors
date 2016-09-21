@@ -25,7 +25,7 @@ public class RockPaperScissors implements Game {
 	public static final GameRole<RockPaperScissors> SCISSORS = new GameRole<RockPaperScissors>() {
 		@Override
 		public boolean canBeat(GameRole<RockPaperScissors> other) {
-			return false;
+			return other == PAPER;
 		}
 	};
 }
