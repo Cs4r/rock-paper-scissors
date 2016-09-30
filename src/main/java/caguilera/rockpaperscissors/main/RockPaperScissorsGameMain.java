@@ -16,7 +16,7 @@ import caguilera.rockpaperscissors.impl.RockyPlayer;
  * 
  * Program that plays 20 iterations of Rock, Paper, Scissors.
  * 
- * One player always plays randomly, the other always chooses rock.
+ * One player plays randomly, the other always chooses rock.
  * 
  * At the end it shows how many games each player has one and how many were a
  * draw.
