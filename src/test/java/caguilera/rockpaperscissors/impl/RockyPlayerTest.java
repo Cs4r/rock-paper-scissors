@@ -1,7 +1,6 @@
 package caguilera.rockpaperscissors.impl;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.mock;
 
 import org.junit.Test;
@@ -15,30 +14,13 @@ import org.junit.Test;
 public class RockyPlayerTest {
 
 	@Test(expected = IllegalArgumentException.class)
-	public void ofThrowsIllegalArgumentExceptionWhenANegativeIdIsGiven() {
-		RockyPlayer.of(-1);
-	}
-
-	@Test
-	public void ofCreatesANotNullRockyPlayerWhenIdIsPositive() {
-		assertNotNull(RockyPlayer.of(1));
-	}
-
-	@Test
-	public void ofCreatesAPlayerWithTheGivenId() {
-		int expected = 1;
-		RockyPlayer player = RockyPlayer.of(expected);
-		assertEquals(expected, player.getId());
-	}
-
-	@Test(expected = IllegalArgumentException.class)
 	public void getRoleThrowsIllegalArgumentExceptionWhenRoundIsNull() {
-		RockyPlayer.of(1).getRole(null);
+		new RockyPlayer().getRole(null);
 	}
 
 	@Test
 	public void getRoleAlwaysReturnsRockAsGameRole() {
-		RockyPlayer player = RockyPlayer.of(1);
+		RockyPlayer player = new RockyPlayer();
 		RockPaperScissorsRound round = mock(RockPaperScissorsRound.class);
 		for (int i = 0; i < 10; ++i) {
 			assertEquals(RockPaperScissorsGame.ROCK, player.getRole(round));

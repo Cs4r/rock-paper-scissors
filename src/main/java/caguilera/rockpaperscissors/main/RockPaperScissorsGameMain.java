@@ -28,8 +28,8 @@ public class RockPaperScissorsGameMain {
 	public static final int NUMBER_OF_ROUNDS = 20;
 
 	public static void main(String[] args) {
-		final Player<RockPaperScissorsGame> player1 = RandomPlayer.of(1);
-		final Player<RockPaperScissorsGame> player2 = RockyPlayer.of(2);
+		final Player<RockPaperScissorsGame> player1 = new RandomPlayer();
+		final Player<RockPaperScissorsGame> player2 = new RockyPlayer();
 		final GameReport<RockPaperScissorsGame> report = new DefaultGameReport<>();
 
 		for (int roundId = 1; roundId <= NUMBER_OF_ROUNDS; ++roundId) {

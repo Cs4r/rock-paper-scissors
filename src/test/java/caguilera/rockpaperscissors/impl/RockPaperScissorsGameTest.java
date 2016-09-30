@@ -4,8 +4,8 @@ import static caguilera.rockpaperscissors.GameRoundResult.LOSS;
 import static caguilera.rockpaperscissors.GameRoundResult.TIE;
 import static caguilera.rockpaperscissors.GameRoundResult.WIN;
 import static caguilera.rockpaperscissors.impl.RockPaperScissorsGame.PAPER;
-import static caguilera.rockpaperscissors.impl.RockPaperScissorsGame.SCISSORS;
 import static caguilera.rockpaperscissors.impl.RockPaperScissorsGame.ROCK;
+import static caguilera.rockpaperscissors.impl.RockPaperScissorsGame.SCISSORS;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;

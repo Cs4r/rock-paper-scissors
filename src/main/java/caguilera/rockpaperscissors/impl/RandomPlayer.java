@@ -19,25 +19,17 @@ import caguilera.rockpaperscissors.Player;
  */
 public class RandomPlayer implements Player<RockPaperScissorsGame> {
 
-	private final int id;
 	private final Random generator;
 
 	/**
 	 * Used only for testing purposes
 	 */
-	protected RandomPlayer(int id, long seed) {
-		this.id = id;
+	protected RandomPlayer(long seed) {
 		this.generator = new Random(seed);
 	}
 
-	private RandomPlayer(int id) {
-		this.id = id;
+	public RandomPlayer() {
 		this.generator = new Random(System.currentTimeMillis());
-	}
-
-	@Override
-	public int getId() {
-		return id;
 	}
 
 	@Override
@@ -57,22 +49,4 @@ public class RandomPlayer implements Player<RockPaperScissorsGame> {
 
 		return SCISSORS;
 	}
-
-	/**
-	 * Creates instances of {@link RandomPlayer}
-	 * 
-	 * @param id
-	 *            the player's id
-	 * @return a new instance of {@link RandomPlayer} with the given id
-	 * 
-	 * @throws IllegalArgumentException
-	 *             if the given id is not positive
-	 */
-	public static RandomPlayer of(int id) {
-		if (id < 1) {
-			throw new IllegalArgumentException();
-		}
-		return new RandomPlayer(id);
-	}
-
 }

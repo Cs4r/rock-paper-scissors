@@ -11,11 +11,6 @@ package caguilera.rockpaperscissors;
 public interface Player<T extends Game> {
 
 	/**
-	 * @return A positive number representing the player's identifier.
-	 */
-	int getId();
-
-	/**
 	 * Provides the {@link GameRole} that a player takes during a
 	 * {@link GameRound}
 	 * 
